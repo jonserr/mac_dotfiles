@@ -20,21 +20,11 @@ HTTPS:
 git clone https://github.com/jonserr/mac_dotfiles.git ~/.mac_dotfiles
 ```
 
-SSH:
-
-```bash
-git clone git@github.com:jonserr/mac_dotfiles.git ~/.mac_dotfiles
-```
-
-## Add the loader lines
-
-Append this line to `~/.zprofile`:
+## Append the loader lines to `~/.zprofile` and `~/.zshrc`:
 
 ```bash
 printf '%s\n' '[[ -f "$HOME/.mac_dotfiles/zsh/env.zsh" ]] && source "$HOME/.mac_dotfiles/zsh/env.zsh"' >> ~/.zprofile
 ```
-
-Append these lines to `~/.zshrc`:
 
 ```bash
 printf '%s\n' \
