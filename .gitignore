@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Backups created by bootstrap.sh
+*.backup.*
+
+# Editor cruft
+*.swp
+*~
+.idea/
+.vscode/
