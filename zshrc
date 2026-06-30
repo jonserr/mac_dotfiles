@@ -93,6 +93,12 @@ extract() {
 	fi
 }
 
+catsed() {
+	[ "$#" -ne 1 ] && { echo "Usage: catsed <file.csv>" >&2; return 1; }
+    [ ! -f "$1" ] && { echo "Error: file not found: $1" >&2; return 1; }
+    sed 's/,/ ,/g' "$1" | column -t -s, | less -S
+}
+
 # NVM --------------------------------------------------------------------------
 export NVM_DIR="$HOME/.nvm"
 
